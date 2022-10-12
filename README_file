@@ -1,1 +1,15 @@
-Explains what this repository is for
+BIT477/577: DATA ANALYSIS PROJECT
+TITLE: Comparison of Deblur and DADA2 on 16S rRNA sequencing data
+
+This directory contains the files and scripts used to process and analyze 16S marten paired-end sequences. 
+Two LSF batch scripts were written, with each using a different denoising program through QIIME, so that
+these jobs can be resubmitted to the HPC for reproducibility and code tracking. 
+
+Denoising programs used were Deblur and DADA2. The goal of this project was to compare and contrast the 
+results of these two program to see if they introduce any bias in the diversity metric results and if so, 
+what type of bias. This project is aimed towards deducing the differences between Deblur and DADA2 to 
+help future researchers determine which program they should use based on their dataset.
+
+DIFFERENCES AT A GLANCE:
+Deblur - uses sub-OTU method. Requires read joining on paired end reads.
+DADA2 - uses ASV method. Does read joining itself within the program.
